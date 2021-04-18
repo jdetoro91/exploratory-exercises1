@@ -73,20 +73,44 @@ print(med)
 
 ```{r}
 uniqv <- unique(x)
+
 # I need to know the position of the first appearance of each element in order to make a count. 
 match <- match(x, uniqv)
+
 # Now I count the number of occurrences of each value, even though they are positions, it doesn't matter, because they refer to a unique element due to the use of uniqv
 tab <- tabulate(match)
+
 # Now I want to know what is the maximum of the entire vector
 pos <- which.max(tab)
+
 # The previous number tells me the position of the element in the initial vector, so I have to paint the value of that element in its first occurrence
 print(uniqv[pos])
 ```
 
-
 ## Exercise 23
 
 ![Exercise 23](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/23.png)
+
+```{r}
+function quicksort(v){
+  if(length(v)==0){
+    print("Empty array")
+    close()
+  }else{
+    pivots <- match(x[1], v)
+    lesser <- 
+    greatter <- 
+  }
+}
+```
+
+Try the function:
+
+```{r}
+set.seed(100)
+print(sample(1:100, 10))
+```
+
 
 ## Exercise 24
 
