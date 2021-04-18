@@ -5,18 +5,91 @@ output:
   word_document: default
   html_notebook: default
 ---
+
 # Introduction to R_Exercises
 
 ## Exercise 16
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![Exercise 16](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/16.png)
+
+-   Create a vector called "x":
+
+```{r}
+x <- c(36, 28, 19, 22, 27, 28, 30, 31, 38, 46, 40, 29, 21, 28, 39, 46, 43, 27, 30, 54)
+```
+
+-   Prints the vector size:
+
+```{r}
+print(length(x))
+```
+
+-   AVG w/out mean function:
+
+```{r}
+m <- sum(x)/length(x)
+print(m)
+```
+
+-   Variance w/out variance function:
+
+```{r}
+v <- (1/(length(x)-1))*sum((x-m)**2)
+print(v)
+```
+
+```{r}
+var(x)
+```
+
+> I have used the variance function to check that in the statement of the exercise there is an error in the result. CQD
+
+-   Standard Deviation using the function:
+
+```{r}
+sd <- sd(x)
+print(sd)
+```
+
+-   Median w/out median function:
+
+We need sort the sample, ask for the lenght to know if it is odd or even, and at the end calculate the median
+
+```{r}
+x_sort <- sort(x)
+
+if(length(x)%%2 == 0){
+  x1 <- x_sort[((length(x)+1)/2)-.5]
+  x2 <- x_sort[((length(x)+1)/2)+.5]
+  med <- (x1+x2)/2
+}else{
+  med <- x_sort[(length(x)+1)/2]
+}
+
+print(med)
+```
+
+-   Calculate the mode:
+
+```{r}
+uniqv <- unique(x)
+# I need to know the position of the first appearance of each element in order to make a count. 
+match <- match(x, uniqv)
+# Now I count the number of occurrences of each value, even though they are positions, it doesn't matter, because they refer to a unique element due to the use of uniqv
+tab <- tabulate(match)
+# Now I want to know what is the maximum of the entire vector
+pos <- which.max(tab)
+# The previous number tells me the position of the element in the initial vector, so I have to paint the value of that element in its first occurrence
+print(uniqv[pos])
+```
+
 
 ## Exercise 23
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![Exercise 23](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/23.png)
 
 ## Exercise 24
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![Exercise 24](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/24.png)
 
 Lorem ipsum dolor sit met, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat. Luis aute irure dolor in reprehenderit in voluptate velit esse cillim dolore eu fuggita nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animé id est labour.
