@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+author: "Juan de Toro"
+output:
+  word_document: default
+  html_notebook: default
+---
+# Introduction to R_Exercises
+
+## Exercise 16
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+## Exercise 23
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+## Exercise 24
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+Lorem ipsum dolor sit met, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat. Luis aute irure dolor in reprehenderit in voluptate velit esse cillim dolore eu fuggita nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animé id est labour.
