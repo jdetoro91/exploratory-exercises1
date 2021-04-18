@@ -92,14 +92,16 @@ print(uniqv[pos])
 ![Exercise 23](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/23.png)
 
 ```{r}
-function quicksort(v){
+quicksort <- function (v){
   if(length(v)==0){
     print("Empty array")
     close()
   }else{
-    pivots <- match(x[1], v)
-    lesser <- 
-    greatter <- 
+    pivots <- v[match(v[1], v)]
+    lesser <- v[which(as.vector(v) < v[1])]
+    greatter <- v[which(as.vector(v) > v[1])]
+    result <- c(sort(lesser), sort(pivots), sort(greatter))
+    return(result)
   }
 }
 ```
@@ -108,7 +110,7 @@ Try the function:
 
 ```{r}
 set.seed(100)
-print(sample(1:100, 10))
+quicksort(sample(1:100, 10))
 ```
 
 
@@ -116,4 +118,10 @@ print(sample(1:100, 10))
 
 ![Exercise 24](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/24.png)
 
-Lorem ipsum dolor sit met, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat. Luis aute irure dolor in reprehenderit in voluptate velit esse cillim dolore eu fuggita nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animé id est labour.
+-   Seed in 2017:
+
+```{r}
+set.seed(2017)
+```
+
+
