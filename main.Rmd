@@ -113,7 +113,6 @@ set.seed(100)
 quicksort(sample(1:100, 10))
 ```
 
-
 ## Exercise 24
 
 ![Exercise 24](https://raw.githubusercontent.com/jdetoro91/exploratory-exercises1/main/24.png)
