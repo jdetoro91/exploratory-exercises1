@@ -122,6 +122,50 @@ quicksort(sample(1:100, 10))
 
 ```{r}
 set.seed(2017)
+y <- rnorm(1000, mean=20, sd=2)
 ```
 
+-   2 Histograms:
 
+```{r}
+hist(y)
+hist(y, breaks=20)
+```
+
+-   Density:
+
+```{r}
+plot(density(y))
+```
+
+-   Box:
+
+```{r}
+boxplot(y)
+```
+
+-   Pie:
+
+```{r}
+y_c <- cut(y, breaks=5)
+pie(table(y_c))
+```
+
+-   Bar:
+
+```{r}
+barplot(table(y_c))
+```
+
+-   Scatter:
+
+```{r}
+p <- sample(1:1000, 1000, replace=T)
+plot(p,y)
+```
+
+-   Line:
+
+```{r}
+plot(sort(y), type = "l")
+```
